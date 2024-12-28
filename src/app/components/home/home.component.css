@@ -1,0 +1,49 @@
+.typing-effect {
+  white-space: normal; /* Empêche le texte de se diviser sur plusieurs lignes */
+  overflow: hidden; /* Cache le texte pendant l'animation */
+  border-right: 3px solid black; /* Crée un curseur */
+  width: 0;
+  word-wrap: break-word;
+  animation: typing 4s steps(100) 1s forwards;
+  max-height: 10%;
+  max-width: 100%;
+}
+
+.typing-effect2 {
+  white-space: normal; /* Empêche le texte de se diviser sur plusieurs lignes */
+  overflow: hidden; /* Cache le texte pendant l'animation */
+  border-right: 3px solid black; /* Crée un curseur */
+  width: 0;
+  word-wrap: break-word;
+  animation: typing 4s steps(60) 5s forwards;
+  max-height: 10%;
+  max-width: 100%;
+}
+
+.typing-effect3 {
+  white-space: nowrap; /* Empêche le texte de se diviser sur plusieurs lignes */
+  overflow: hidden; /* Cache le texte pendant l'animation */
+  border-right: 3px solid black; /* Crée un curseur */
+  width: 0;
+  animation: typing 4s steps(10) 9s forwards;
+  max-height: 10%;
+  max-width: 100%;
+}
+
+.blink {
+  animation: blink 0.85s steps(5, start) infinite;
+}
+
+@keyframes typing {
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+

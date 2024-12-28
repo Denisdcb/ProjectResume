@@ -1,0 +1,12 @@
+<div class="flex flex-col justify-center items-center mt-5 h-3/4" id="myForm">
+  <p class="text-blue-400 text-2xl font-mono mb-5">You can contact me by sending me an email or by filling out the form below.</p>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="w-1/3 h-3/4 mt-2 flex flex-col font-mono items-center gap-1">
+      <input id="name" type="text" formControlName="name" class="h-8 form-input rounded-lg border-2 border-gray-500 text-center w-full mb-1" placeholder="Enter your name" autocomplete="off">
+      <input id="email" type="email" formControlName="email" class="h-8 form-input rounded-lg border-2 border-gray-500 text-center w-full mb-1" placeholder="Enter your email" autocomplete="off">
+      <input id="message" type="text" formControlName="message" class="form-input rounded-lg border-2 border-gray-500 text-center w-full h-20 mb-1" placeholder="Enter your message" autocomplete="off">
+      <button type="submit" [disabled]="myForm.invalid" class="h-8 form-button w-full bg-sky-300 rounded-lg border-2 border-gray-500 text-center hover:bg-sky-600 font-bold">Send</button>
+  </form>
+</div>
+<div class="flex justify-center items-center mt-5 h-3/4 hidden" id="formSend">
+  <p class="text-blue-400 text-2xl font-mono typing-effect">Your message has been sent ! We will contact you as soon as possible.</p><span class="text-blue-700 text-4xl blink">_</span>
+</div>

@@ -1,0 +1,24 @@
+.typing-effect {
+  white-space: nowrap; /* Empêche le texte de se diviser sur plusieurs lignes */
+  overflow: hidden; /* Cache le texte pendant l'animation */
+  width: 0;
+  animation: typing 4s steps(50) 1s forwards;
+  word-wrap: break-word;
+  max-width: 63%;
+}
+
+.blink {
+  animation: blink 0.85s steps(5, start) infinite;
+}
+
+@keyframes typing {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
